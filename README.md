@@ -1,2 +1,2 @@
 # ehr
-Ehitsuregistri failinimede generaator
+Ehitusregistri failinimede generaator
