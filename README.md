@@ -1,0 +1,2 @@
+# ehr
+Ehitsuregistri failinimede generaator
