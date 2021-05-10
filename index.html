@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="et-EE">
+<head>
+ <TITLE>
+   Ehitusregistri failinime leidmine
+ </TITLE>
+<style>
+body {
+  background-image: url("https://hr-john.github.io/ehr/Schematic.jpeg") ;
+  background-size: cover;
+// pexels-pixabay-271667.jpg
+  }
+ P { margin:0; text-indent: 2em }
+}
+ 
+  /* [CONTAINER] */
+#cal-wrap { max-width: 600px; }
+
+/* [PERIOD SELECTOR] */
+#cal-date { display: flex; }
+#cal-mth, #cal-yr, #cal-set, #cal-day {
+  box-sizing: border-box;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border: 0;
+  color: #fff;
+}
+#cal-mth, #cal-yr, #cal-day { background: #ea4c4c; }
+#cal-set { background: #4e83d9; }
+/* [CALENDAR] */
+#calendar {
+  width: 100%;
+  border-collapse: collapse;
+}
+#calendar tr.head td {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  background: #f37070;
+  padding: 15px;
+  text-align: center;
+}
+#calendar tr.day td {
+  border: 1px solid #ddd;
+  width: 14.28%;
+  padding: 15px 5px;
+  vertical-align: top;
+}
+#calendar tr.day td:hover {
+  background: #fff9e4;
+  cursor: pointer;
+}
+#calendar tr td.blank {
+  background: #f5f5f5;
+}
+#calendar .dd {
+  font-size: 1.2em;
+  color: #999;
+}
+ 
+ .ct-series-a .ct-line {
+  /* Set the colour of this series line */
+  fill: green;
+  line: red;
+  /* Control the thikness of your lines */ //  stroke-width: 5px;
+  /* Create a dashed line with a pattern */ //  stroke-dasharray: 10px 20px;
+}
+ 
+</style>
+<script>
+ 
+</script>
+</head>
+
+ <body>
+  <H1>Ehitusregistri faili genereerimine</H1>
+  <div class="ct-chart"></div>
+  
+  <div id="cal-wrap">
+  <!-- [PERIOD SELECTOR] -->
+  <div id="cal-date">
+    <div id="cal-day"></div>   
+    <select id="cal-mth"></select>
+    <select id="cal-yr"></select>
+    <input id="cal-set" type="button" value="SET"/>
+  </div>
+  <!-- [CALENDAR] -->
+  <div id="cal-container"></div>
+ </div>
+  
+  <input type="file" onchange="readFile(this)"> 
+  <button id="download" type="button" onclick="kuva()" name="button">CSV</button>
+ </body>
+</html>
