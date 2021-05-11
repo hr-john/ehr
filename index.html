@@ -74,6 +74,18 @@ body {
 
  <body>
   <H1>Ehitusregistri faili genereerimine</H1>
+  <FORM>
+     <SELECT NAME="staadium" id="staadium">
+      <OPTION VALUE="ES">Eskiis
+      <OPTION VALUE="TN">Tehnoloogiline projekt
+      <OPTION VALUE="EP">Eelprojekt
+      <OPTION VALUE="PP" SELECTED>P&otilde;hiprojekt
+      <OPTION VALUE="TH">Tehniline projekt
+      <OPTION VALUE="TP">Tööprojekt
+      <OPTION VALUE="TT">Tootejoonised
+      <OPTION VALUE="TJ">Teostusjoonised
+       </SELECT>
+  <div id="p_dok"></div>
   <div class="ct-chart"></div>
   
   <div id="cal-wrap">
@@ -90,5 +102,7 @@ body {
   
   <input type="file" onchange="readFile(this)"> 
   <button id="download" type="button" onclick="kuva()" name="button">CSV</button>
+<BR>
+ <div id="p_tunnus">XXXX</div>_<div id="p_staadium">XX</div>_<div id="p_dok"></div>_<div id="p_ver">v00</div>_<div id="p_note">_</div><div id="p_date"></div>.<div id="p_file"></div>
  </body>
 </html>
