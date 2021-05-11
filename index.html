@@ -75,6 +75,7 @@ body {
  <body>
   <H1>Ehitusregistri faili genereerimine</H1>
   <FORM>
+    <input type="text" id="s_tunnus" size="14" onchange="document.getElementById('p_tunnus').value = YYYY">
      <SELECT NAME="staadium" id="staadium">
       <OPTION VALUE="ES">Eskiis
       <OPTION VALUE="TN">Tehnoloogiline projekt
@@ -85,6 +86,19 @@ body {
       <OPTION VALUE="TT">Tootejoonised
       <OPTION VALUE="TJ">Teostusjoonised
      </SELECT>
+       
+
+     <SELECT NAME="staadium" id="staadium">
+      <OPTION VALUE="ES">Eskiis
+      <OPTION VALUE="TN">Tehnoloogiline projekt
+      <OPTION VALUE="EP">Eelprojekt
+      <OPTION VALUE="PP" SELECTED>P&otilde;hiprojekt
+      <OPTION VALUE="TH">Tehniline projekt
+      <OPTION VALUE="TP">Tööprojekt
+      <OPTION VALUE="TT">Tootejoonised
+      <OPTION VALUE="TJ">Teostusjoonised
+     </SELECT>
+          
     <div id="p_dok"></div>
     <div class="ct-chart"></div>
     <div id="cal-wrap">
